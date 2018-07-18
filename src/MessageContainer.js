@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   ListView,
@@ -138,7 +139,8 @@ export default class MessageContainer extends React.Component {
   render() {
     return (
       <View style={{flex: 1}} onLayout={() => {
-        this._scrollView.scrollToEnd()
+        // **  Not implemented yet in React-Native-Web project AMB 7/18/2018  ***
+        // this._scrollView.scrollToEnd(true)
       }
       }>
         <ListView
@@ -153,7 +155,8 @@ export default class MessageContainer extends React.Component {
             }
           }}
           {...this.props.listViewProps}
-          onContentSizeChange={() => this._scrollView.scrollToEnd()}
+          // **  Not implemented yet in React-Native-Web project AMB 7/18/2018  ***
+          // onContentSizeChange={() => this._scrollView.scrollToEnd(true)}
           dataSource={this.state.dataSource}
           renderScrollComponent={this.renderScrollComponent}
           renderRow={this.renderRow}
@@ -176,10 +179,10 @@ MessageContainer.defaultProps = {
 };
 
 MessageContainer.propTypes = {
-  messages: React.PropTypes.array,
-  user: React.PropTypes.object,
-  renderFooter: React.PropTypes.func,
-  renderMessage: React.PropTypes.func,
-  onLoadEarlier: React.PropTypes.func,
-  listViewProps: React.PropTypes.object,
+  messages: PropTypes.array,
+  user: PropTypes.object,
+  renderFooter: PropTypes.func,
+  renderMessage: PropTypes.func,
+  onLoadEarlier: PropTypes.func,
+  listViewProps: PropTypes.object,
 };

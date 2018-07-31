@@ -154,6 +154,7 @@ const styles = {
       backgroundColor: '#f0f0f0',
       marginRight: 60,
       minHeight: 20,
+      width: '95%',
       justifyContent: 'flex-end',
     },
     containerToNext: {

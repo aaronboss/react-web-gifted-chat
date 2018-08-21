@@ -138,7 +138,7 @@ export default class MessageContainer extends React.Component {
 
   render() {
     return (
-      <View style={{flex: 1}} onLayout={() => {
+      <div id='listViewDiv' style={{flex: 1}} onLayout={() => {
         // **  Not implemented yet in React-Native-Web project AMB 7/18/2018  ***
         // this._scrollView.scrollToEnd(true)
       }
